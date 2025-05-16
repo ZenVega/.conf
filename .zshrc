@@ -90,6 +90,9 @@ source $ZSH/oh-my-zsh.sh
 # Change umask to make directory sharing easier
 umask 0002
 
+
+# Activates vim style editing for shell
+set -o vi
 # Ignore duplicates in command history and increase
 # history size to 1000 lines
 
