@@ -87,8 +87,16 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='nvim'
 # fi
 
+# Change umask to make directory sharing easier
+umask 0002
+
+# Ignore duplicates in command history and increase
+# history size to 1000 lines
+
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
+export HISTCONTROL=ignoredups
+export HISTSIZE=1000
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -99,5 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -a --color=auto'
+alias man='MANWIDTH=75 man'
